@@ -10,25 +10,7 @@
 </head>
 
 <body>
-    <div id="app">
-        <textarea v-model="src"></textarea>
-      </div>
     
-      <script type="text/javascript">
-        new Vue({
-          el: '#app',
-          data: {
-              src: ''
-          },
-          mounted(){
-            var vm = this
-            axios.get('http://localhost:3000/api')
-              .then(data => {
-                vm.src = JSON.stringify(data.data)
-              })
-          }
-        })
-      </script>
     <img src="./logo.png" alt="Inshare logo" class="logo">
     <section class="upload-container">
         <form action="">
@@ -102,8 +84,6 @@
         </svg>
     </a>
     <script src="index.js"></script>
-    <script type="text/javascript" src="vue.js"></script>
-<script type="text/javascript" src="axios.js"></script>
 </body>
 
 </html>
